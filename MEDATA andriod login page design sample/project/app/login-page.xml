@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="gradient-bg">
+    <StackLayout class="p-8">
+        <!-- Logo and App Name -->
+        <StackLayout class="text-center p-8">
+            <Label text="MEData" class="logo-text"/>
+            <Label text="Your Web3 Data Platform" class="text-white text-lg"/>
+        </StackLayout>
+
+        <!-- Login Form -->
+        <StackLayout class="p-4 rounded-lg">
+            <TextField hint="Email" class="input-field" keyboardType="email" autocorrect="false" autocapitalizationType="none"/>
+            <TextField hint="Password" class="input-field" secure="true"/>
+            
+            <!-- Login Buttons -->
+            <Button text="Sign In" tap="{{ onSignIn }}" class="btn-primary"/>
+            
+            <!-- Social Login -->
+            <StackLayout class="m-y-4">
+                <Label text="Or continue with" class="text-white text-center m-y-2"/>
+                <Button text="Continue with Google" tap="{{ onGoogleSignIn }}" class="btn-secondary"/>
+                <Button text="Connect Wallet" tap="{{ onWalletConnect }}" class="btn-secondary"/>
+            </StackLayout>
+
+            <!-- Sign Up Link -->
+            <StackLayout orientation="horizontal" class="text-center m-t-4">
+                <Label text="Don't have an account? " class="text-white"/>
+                <Label text="Sign Up" tap="{{ onSignUp }}" class="text-white font-bold"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</Page>
